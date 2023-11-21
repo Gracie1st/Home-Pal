@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="img/Logo.png" rel="icon">
+    <script src="scripts/signup_login.js"></script>
+    
     <title>Home Pal</title>
    </head>
 <body>
@@ -13,14 +15,14 @@
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
-        <img src="img/real-estate-business.jpg" alt="Real estate vector">
+        <img src="images/real-estate-business.jpg" alt="Real estate vector">
         <div class="text">
           <span class="text-1">Your Ideal property <br> awaits!</span>
           <span class="text-2">We're here to help you find the perfect property. </span>
         </div>
       </div>
       <div class="back">
-        <img class="backImg" src="img/realestate.jpg" alt="real estate">
+        <img class="backImg" src="images/real-estate-business.jpg" alt="real estate">
         <div class="text">
           <span class="text-1">Your Ideal property <br> awaits</span>
           <span class="text-2">We're here to help you find the perfect property. </span>
@@ -35,13 +37,15 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Enter your email" required>
+                <input id="login-email" type="text" placeholder="Enter your email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input id="login-password" type="password" placeholder="Enter your password" required>
+                <div class="error"></div>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
+              
               <div class="button input-box">
                 <input type="submit" value="Submit">
               </div>
@@ -59,11 +63,11 @@
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Enter your email" required>
+                <input id="register-email" type="email" placeholder="Enter your email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input id="register-password" type="password" placeholder="Enter your password" required>
               </div>
               <div class="button input-box">
                 <input type="submit" value="Submit">
