@@ -37,7 +37,7 @@ const AuthPage = () => {
 
     // Perform signup API call
     try {
-      const response = await fetch('https://home-pal.onrender.com/api/signup', {
+      const response = await fetch('https://home-pal.onrender.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const AuthPage = () => {
           required
         />
 
-        <button type="submit" id="submit">Login</button>
+        <button type="submit" id="login-submit">Login</button>
       </form>
 
       <h1>Sign Up</h1>
@@ -104,7 +104,7 @@ const AuthPage = () => {
           required
         />
 
-        <button type="submit" id="submit">Sign Up</button>
+        <button type="submit" id="signup-submit">Sign Up</button>
       </form>
     </div>
   );
