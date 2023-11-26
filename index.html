@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="img/Logo.png" rel="icon">
-    <script src="scripts/signup_login.js"></script>
-    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="scripts/login-signup.js"></script>
     <title>Home Pal</title>
    </head>
 <body>
+  <div id="root"></div>
   <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
@@ -74,6 +76,9 @@
               </div>
               <div class="text sign-up-text">Already have an account? <label for="flip">Login!</label></div>
             </div>
+          <script>
+            ReactDOM.render(React.createElement(login-signup), document.getElementById('root'));
+          </script>
       </form>
     </div>
     </div>
