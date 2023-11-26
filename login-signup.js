@@ -1,13 +1,16 @@
+// LoginSignup.js
 import React, { useState } from 'react';
 
-const AuthPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const LoginSignup = () => {
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [registerName, setRegisterName] = useState('');
+  const [registerEmail, setRegisterEmail] = useState('');
+  const [registerPassword, setRegisterPassword] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Perform login API call
     try {
       const response = await fetch('https://home-pal.onrender.com/api/login', {
         method: 'POST',
@@ -15,8 +18,8 @@ const AuthPage = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email,
-          password,
+          email: loginEmail,
+          password: loginPassword,
         }),
       });
 
@@ -24,9 +27,8 @@ const AuthPage = () => {
         throw new Error('Login failed');
       }
 
-      // Handle successful login, e.g., redirect to another page
       console.log('Login successful');
-      history.push('/homepage.html');
+      // Handle successful login (e.g., redirect to another page)
     } catch (error) {
       console.error('Error:', error.message);
     }
@@ -35,7 +37,6 @@ const AuthPage = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    // Perform signup API call
     try {
       const response = await fetch('https://home-pal.onrender.com/api/register', {
         method: 'POST',
@@ -43,8 +44,9 @@ const AuthPage = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email,
-          password,
+          name: registerName,
+          email: registerEmail,
+          password: registerPassword,
         }),
       });
 
@@ -52,62 +54,36 @@ const AuthPage = () => {
         throw new Error('Signup failed');
       }
 
-      // Handle successful signup, e.g., redirect to another page
       console.log('Signup successful');
+      // Handle successful signup (e.g., redirect to another page)
     } catch (error) {
       console.error('Error:', error.message);
     }
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <label htmlFor="login-email">Email:</label>
-        <input
-          type="text"
-          id="login-email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+    <div className="forms">
+      <div className="form-content">
+        {/* Login Form */}
+        <div className="login-form">
+          <div className="title">Login</div>
+          <form onSubmit={handleLogin}>
+            {/* ... input fields for login */}
+            <button type="submit">Login</button>
+          </form>
+        </div>
 
-        <label htmlFor="login-password">Password:</label>
-        <input
-          type="password"
-          id="login-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-
-        <button type="submit" id="login-submit">Login</button>
-      </form>
-
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSignup}>
-        <label htmlFor="login-email">Email:</label>
-        <input
-          type="text"
-          id="login-email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-
-        <label htmlFor="login-password">Password:</label>
-        <input
-          type="password"
-          id="login-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-
-        <button type="submit" id="signup-submit">Sign Up</button>
-      </form>
+        {/* Signup Form */}
+        <div className="signup-form">
+          <div className="title">Sign Up</div>
+          <form onSubmit={handleSignup}>
+            {/* ... input fields for signup */}
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default AuthPage;
+export default LoginSignup;
