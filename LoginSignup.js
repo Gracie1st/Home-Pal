@@ -29,6 +29,7 @@ const LoginSignup = () => {
 
       console.log('Login successful');
       // Handle successful login (e.g., redirect to another page)
+      history.push('/homepage.html');
     } catch (error) {
       console.error('Error:', error.message);
     }
