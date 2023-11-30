@@ -55,7 +55,7 @@
               <div class="button input-box">
                 <input type="submit" value="Submit" id="signup-submit">
               </div>
-              <div class="text sign-up-text">Don't have an account? <label for="flip">Sign up!</label></div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip" id="register">Sign up!</label></div>
             </div>
         </form>
       </div>
@@ -78,7 +78,7 @@
               <div class="button input-box">
                 <input type="submit" value="Submit" id="login-submit">
               </div>
-              <div class="text sign-up-text">Already have an account? <label for="flip">Login!</label></div>
+              <div class="text sign-up-text">Already have an account? <label for="flip" id="login">Login!</label></div>
             </div>
       </form>
     </div>
@@ -87,7 +87,8 @@
   </div>
   <script>
     ReactDOM.render(React.createElement(LoginSignup), document.getElementById('root'));
-    <script>
+  </script>
+  <script>
   // Get references to the elements
   const loginTab = document.querySelector('[data-id="login"]');
   const registerTab = document.querySelector('[data-id="register"]');
@@ -109,8 +110,6 @@
     registerForm.style.display = 'block';
     loginForm.style.display = 'none';
   });
-</script>
-
   </script>
 </body>
 </html>
