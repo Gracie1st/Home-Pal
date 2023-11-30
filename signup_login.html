@@ -8,86 +8,80 @@
     <link href="img/Logo.png" rel="icon">
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script type="module" src="LoginSignup.js">
-      npm install react@latest react-dom@latest
-      import LoginSignup from './LoginSignup';
-      export default LoginSignup;
-    npm install react@latest react-dom@latest
-  </script>
+    <script type="module" src="LoginSignup.js"></script>
     <title>Home Pal</title>
-   </head>
-<body>
-  <div id="root"></div>
-  <div class="container">
-    <input type="checkbox" id="flip">
-    <div class="cover">
-      <div class="front">
-        <img src="img/login_front.jpg" alt="Real estate vector">
-        <div class="text">
-          <span class="text-1">Your Ideal property <br> awaits!</span>
-          <span class="text-2">We're here to help you find the perfect property. </span>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="container">
+      <input type="checkbox" id="flip">
+      <div class="cover">
+        <div class="front">
+          <img src="img/login_front.jpg" alt="Real estate vector">
+          <div class="text">
+            <span class="text-1">Your Ideal property <br> awaits!</span>
+            <span class="text-2">We're here to help you find the perfect property. </span>
+          </div>
+        </div>
+        <div class="back">
+          <img class="backImg" src="img/signup_back.jpg" alt="real estate">
+          <div class="text">
+            <span class="text-1">Your Ideal property <br> awaits</span>
+            <span class="text-2">We're here to help you find the perfect property. </span>
+          </div>
         </div>
       </div>
-      <div class="back">
-        <img class="backImg" src="img/signup_back.jpg" alt="real estate">
-        <div class="text">
-          <span class="text-1">Your Ideal property <br> awaits</span>
-          <span class="text-2">We're here to help you find the perfect property. </span>
-        </div>
-      </div>
-    </div>
-    <div class="forms">
+      <div class="forms">
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input id="login-email" type="text" placeholder="Enter your email" required>
-              </div>
-              <div class="input-box">
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input id="login-email" type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
                 <i class="fas fa-lock"></i>
                 <input id="login-password" type="password" placeholder="Enter your password" required>
-                <div class="error"></div>
+                  <div class="error"></div>
+                </div>
+                <div class="text"><a href="#">Forgot password?</a></div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit" id="signup-submit">
+                </div>
+                <div class="text sign-up-text">Don't have an account? <label for="flip" id="register">Sign up!</label></div>
               </div>
-              <div class="text"><a href="#">Forgot password?</a></div>
-              
-              <div class="button input-box">
-                <input type="submit" value="Submit" id="signup-submit">
-              </div>
-              <div class="text sign-up-text">Don't have an account? <label for="flip" id="register">Sign up!</label></div>
-            </div>
-        </form>
-      </div>
-        <div class="signup-form">
+            </form>
+          </div>
+          <div class="signup-form">
           <div class="title">Sign Up</div>
-        <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Enter your name" required>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input id="register-email" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input id="register-password" type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit" id="login-submit">
+                </div>
+                <div class="text sign-up-text">Already have an account? <label for="flip" id="login">Login!</label></div>
               </div>
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input id="register-email" type="email" placeholder="Enter your email" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input id="register-password" type="password" placeholder="Enter your password" required>
-              </div>
-              <div class="button input-box">
-                <input type="submit" value="Submit" id="login-submit">
-              </div>
-              <div class="text sign-up-text">Already have an account? <label for="flip" id="login">Login!</label></div>
-            </div>
-      </form>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-  </div>
-  <script>
+    <script>
     ReactDOM.render(React.createElement(LoginSignup.js), document.getElementById('root'));
-  </script>
-</body>
+    </script>
+  </body>
 </html>
