@@ -18,8 +18,8 @@ const LoginSignup = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: login-email,
-          password: login-password,
+          email: loginemail,
+          password: loginpassword,
         }),
       });
 
@@ -45,8 +45,8 @@ const LoginSignup = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: register-name,
-          email: register-email,
+          name: registername,
+          email: registeremail,
           password: register-password,
         }),
       });
