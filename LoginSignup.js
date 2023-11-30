@@ -1,7 +1,9 @@
-// LoginSignup.js
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const LoginSignup = () => {
+  const history = useHistory();
+
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [registerName, setRegisterName] = useState('');
@@ -18,8 +20,8 @@ const LoginSignup = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: loginemail,
-          password: loginpassword,
+          email: loginEmail,
+          password: loginPassword,
         }),
       });
 
@@ -28,7 +30,6 @@ const LoginSignup = () => {
       }
 
       console.log('Login successful');
-      // Handle successful login (e.g., redirect to another page)
       history.push('/index.html');
     } catch (error) {
       console.error('Error:', error.message);
@@ -45,9 +46,9 @@ const LoginSignup = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: registername,
-          email: registeremail,
-          password: register-password,
+          name: registerName,
+          email: registerEmail,
+          password: registerPassword,
         }),
       });
 
@@ -56,11 +57,35 @@ const LoginSignup = () => {
       }
 
       console.log('Signup successful');
-      // Handle successful signup (e.g., redirect to another page)
       history.push('/index.html');
     } catch (error) {
       console.error('Error:', error.message);
     }
   };
+
+  return (
+    <div>
+      {/* Login Form */}
+      <form onSubmit={handleLogin}>
+        <label>Email:</label>
+        <input type="text" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} />
+        <label>Password:</label>
+        <input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} />
+        <button type="submit">Login</button>
+      </form>
+
+      {/* Signup Form */}
+      <form onSubmit={handleSignup}>
+        <label>Name:</label>
+        <input type="text" value={registerName} onChange={(e) => setRegisterName(e.target.value)} />
+        <label>Email:</label>
+        <input type="email" value={registerEmail} onChange={(e) => setRegisterEmail(e.target.value)} />
+        <label>Password:</label>
+        <input type="password" value={registerPassword} onChange={(e) => setRegisterPassword(e.target.value)} />
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  );
+};
 
 export default LoginSignup;
