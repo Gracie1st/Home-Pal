@@ -63,29 +63,4 @@ const LoginSignup = () => {
     }
   };
 
-  return (
-    <div className="forms">
-      <div className="form-content">
-        {/* Login Form */}
-        <div className="login-form">
-          <div className="title">Login</div>
-          <form onSubmit={handleLogin}>
-            {/* ... input fields for login */}
-            <button type="submit">Login</button>
-          </form>
-        </div>
-
-        {/* Signup Form */}
-        <div className="signup-form">
-          <div className="title">Sign Up</div>
-          <form onSubmit={handleSignup}>
-            {/* ... input fields for signup */}
-            <button type="submit">Sign Up</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default LoginSignup;
