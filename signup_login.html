@@ -88,27 +88,6 @@
   </div>
   <script>
     ReactDOM.render(React.createElement(LoginSignup.js), document.getElementById('root'));
-    // Get references to the elements
-    const loginTab = document.querySelector('[data-id="login"]');
-    const registerTab = document.querySelector('[data-id="register"]');
-    const loginForm = document.querySelector('#login');
-    const registerForm = document.querySelector('#register');
-
-    // Function to switch to the login form
-    loginTab.addEventListener('click', function() {
-    loginTab.classList.add('active');
-    registerTab.classList.remove('active');
-    loginForm.style.display = 'block';
-    registerForm.style.display = 'none';
-    });
-
-    // Function to switch to the register form
-    registerTab.addEventListener('click', function() {
-    registerTab.classList.add('active');
-    loginTab.classList.remove('active');
-    registerForm.style.display = 'block';
-    loginForm.style.display = 'none';
-    });
   </script>
 </body>
 </html>
