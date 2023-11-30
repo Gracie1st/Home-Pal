@@ -18,8 +18,8 @@ const LoginSignup = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: loginEmail,
-          password: loginPassword,
+          email: login-email,
+          password: login-password,
         }),
       });
 
@@ -29,7 +29,7 @@ const LoginSignup = () => {
 
       console.log('Login successful');
       // Handle successful login (e.g., redirect to another page)
-      history.push('/homepage.html');
+      history.push('/index.html');
     } catch (error) {
       console.error('Error:', error.message);
     }
@@ -45,9 +45,9 @@ const LoginSignup = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: registerName,
-          email: registerEmail,
-          password: registerPassword,
+          name: register-name,
+          email: register-email,
+          password: register-password,
         }),
       });
 
@@ -57,6 +57,7 @@ const LoginSignup = () => {
 
       console.log('Signup successful');
       // Handle successful signup (e.g., redirect to another page)
+      history.push('/index.html');
     } catch (error) {
       console.error('Error:', error.message);
     }
